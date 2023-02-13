@@ -1,8 +1,8 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  box-sizing: border-box;
 }
 
 :root {
@@ -13,12 +13,99 @@
 }
 
 body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   width: 100%;
   padding: 1rem;
-  background-color: rgb(238, 238, 238);
-  background-color: var(--color-secondary);
-  color: var(--color-font);
-  font-family: 'Montserrat', sans-serif;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  background-color: black;
+}
+
+div#tv-main-info {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+span#tv-likes {
+  display: flex;
+  align-items: center;
+}
+
+.tv-section {
+  padding: 5px;
+  box-shadow: #fff 0 0 10px;
+}
+
+div#tv-other-info {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  font-weight: normal;
+  font-size: 0.5em;
+  flex-direction: column;
+  background-color: rgb(26, 16, 4, 0.4);
+  padding: 0.5rem;
+
+  /* box-shadow: #e7e8dd; */
+}
+
+.tv-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  overflow-wrap: anywhere;
+  margin-block: 3%;
+}
+
+section#section {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 15rem;
+  overflow-wrap: break-word;
+  justify-items: center;
+  justify-content: space-between;
+}
+
+.button {
+  background-color: rgb(130, 99, 156);
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+  width: 100%;
+  height: max-content;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  font-weight: bold;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button:hover {
+  transform: scale(1.05) rotate(-1deg);
+  background-color: #fff;
+  color: #9c8263;
+}
+
+@media (min-width: 576px) {
+  section#section {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  section#section {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1440px) {
+  section#section {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
 }
