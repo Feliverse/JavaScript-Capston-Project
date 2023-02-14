@@ -35,7 +35,7 @@
 
 # 📖 JavaScript Capstone Project <a name="about-project"></a>
 
-The JavaScript capstone project is about building our own web application based on two external APIs. First, we retrieve movies and TV Series from the ![TVmaze API](https://www.tvmaze.com/api) and then record user interactions (likes and comments) using the ![Involvement API](https://www.notion.so/Involvement-API-869e60b5ad104603aa6db59e08150270).
+The JavaScript capstone project is about building our own web application based on two external APIs. First, we retrieve movies and TV Series from the [TVmaze API](https://www.tvmaze.com/api) and then record user interactions (likes and comments) using the [Involvement API](https://www.notion.so/Involvement-API-869e60b5ad104603aa6db59e08150270).
 
 ## 🛠 Built With <a name="built-with"></a>
 
