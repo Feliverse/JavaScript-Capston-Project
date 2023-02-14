@@ -70,7 +70,7 @@ img.tv-main-img {
   width: 100%;
 }
 
-span#tv-likes {
+#tv-likes {
   display: flex;
   align-items: center;
 }
@@ -80,7 +80,7 @@ span#tv-likes {
   box-shadow: #fff 0 0 10px;
 }
 
-div#tv-other-info {
+#tv-other-info {
   color: white;
   display: flex;
   font-weight: normal;
@@ -92,20 +92,28 @@ div#tv-other-info {
 
 .tv-div {
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
   flex-wrap: wrap;
   overflow-wrap: anywhere;
-  margin-block: 3%;
+  margin-block-start: 2%;
 }
 
+<<<<<<< HEAD
 section#section {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+=======
+#section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+>>>>>>> 0326872e75606acd439090658cc4e45f34c671ae
   overflow-wrap: break-word;
   justify-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .button {
@@ -133,6 +141,7 @@ section#section {
   color: #9c8263;
 }
 
+<<<<<<< HEAD
 .heart {
   display: inline-block;
   width: 1rem;
@@ -395,15 +404,6 @@ textarea {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
+=======
+>>>>>>> 0326872e75606acd439090658cc4e45f34c671ae
 
-@media (min-width: 1024px) {
-  section#section {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-  }
-}
-
-@media (min-width: 1440px) {
-  section#section {
-    grid-template-columns: repeat(8, minmax(0, 1fr));
-  }
-}
