@@ -14,7 +14,23 @@
 
   </head>
   <body>
-    <header id="header"></header>
+    <header id="header">
+        <div class="container">
+         <nav id="nav">
+          <div class="logo">
+            <img id="logo" src="./images/today-tv-series.png" alt="" />
+          </div>
+          <ul class="navigation">
+            <li class="active">
+              <a href="#">Home (<span id="totalMovies"></span>)</a>
+            </li>
+            <li><a href="">Movies</a></li>
+            <li><a href="">TV Shows</a></li>
+            <li><a href="">My List</a></li>
+          </ul>
+        </nav>
+    </header>
+
     <main>
         <section id="section">
             <section class="tv-section">
@@ -95,7 +111,18 @@
                 </div>
             </section>
         </section>
+
+        <section class="popup popup-comments hide">
+            <div class="popup-header">
+              <i id="popup-close" class="fa-solid fa-xmark fa-2x"></i>
+            </div>
+            <div class="popup-container"></div>
+        </section>
     </main>
-    <footer id="footer"></footer>
+    <footer id="footer">
+        <div class="container footer-section">
+        <p>Created by <a href="https://github.com/Feliverse">Felipe Haybar</a> & <a href="https://github.com/miltonHenschel">Henschel Nketchogue M.</a></p>
+      </div>
+    </footer>
 </body>
 </html>
