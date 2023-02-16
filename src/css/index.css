@@ -7,6 +7,13 @@
   box-sizing: border-box;
 }
 
+:root {
+  --color-primary: white;
+  --color-secondary: rgba(0, 0, 0, 0.89);
+  --color-tertiary: white;
+  --color-font: rgb(237, 227, 227);
+}
+
 body {
   width: 100%;
   padding: 1rem;
@@ -19,13 +26,37 @@ body {
 /* HEADER */
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   margin: 0 auto;
   color: #f5f5dc;
-  background-color: #8b0000;
+  background-color: var(--color-secondary);
   text-align: center;
   padding: 0 2rem;
+  list-style-type: none;
+  position: absolute;
+  top: 0;
+}
+
+input[type='text'],
+li,
+.btn-outline-primary {
+  display: flex;
+  align-items: center;
+  width: 150%;
+  height: 5px;
+  border: none;
+  list-style: none;
+  background: rgb(56, 54, 54);
+  padding: 20px;
+  border-radius: 50px;
+  margin: 10px 5px;
+  color: var(--color-primary);
+  font-size: medium;
+}
+
+.navigation li {
+  margin: 0 2rem;
 }
 
 ul.navigation {
@@ -36,6 +67,11 @@ ul.navigation {
 
 ul.navigation li {
   color: #fff;
+}
+
+.navigation li:hover {
+  color: var(--color-primary);
+  border-bottom: 3px solid var(--color-primary);
 }
 
 a {
@@ -150,16 +186,6 @@ button.heart-button {
   margin: 0 auto;
 }
 
-nav {
-  list-style-type: none;
-  display: flex;
-  background-color: var(--color-secondary);
-  justify-content: flex-start;
-  align-items: center;
-  position: absolute;
-  top: 0;
-}
-
 .logo p {
   font-size: 2.5rem;
   font-weight: 700;
@@ -172,18 +198,9 @@ nav {
   display: flex;
 }
 
-.navigation li {
-  margin: 0 2rem;
-}
-
 .navigation li a {
   text-decoration: none;
   color: var(--color-font);
-}
-
-.navigation li:hover {
-  color: var(--color-primary);
-  border-bottom: 3px solid var(--color-primary);
 }
 
 .active {
@@ -316,6 +333,7 @@ button {
 h3 {
   margin: 0;
   padding: 0;
+  color: var(--color-primary);
 }
 
 .popup {
@@ -343,6 +361,10 @@ h3 {
 /* Hide scrollbar for Chrome, Safari and Opera */
 .popup-container::-webkit-scrollbar {
   display: none;
+}
+
+h2 {
+  color: var(--color-primary);
 }
 
 .popup-header {
@@ -377,8 +399,8 @@ h3 {
 }
 
 .popup-description {
-  max-width: 100;
   font-weight: 400;
+  color: #fff;
 }
 
 form {
@@ -386,23 +408,6 @@ form {
   flex-direction: row;
   align-items: center;
   width: 100%;
-}
-
-input[type='text'],
-li,
-.btn-outline-primary {
-  display: flex;
-  align-items: center;
-  width: 150%;
-  height: 5px;
-  border: none;
-  list-style: none;
-  background: rgb(56, 54, 54);
-  padding: 20px ;
-  border-radius: 50px;
-  margin: 10px 5px;
-  color: var(--color-primary);
-  font-size: medium;
 }
 
 input[name="comment"] {
