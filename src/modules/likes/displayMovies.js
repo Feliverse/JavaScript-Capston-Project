@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import movieCounter from './movieCounter.js';
 import postLikes from './postLikes.js';
 import getMovieLikes from './getLikes.js';
