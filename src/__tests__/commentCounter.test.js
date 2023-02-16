@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import { commentsCounter } from '../modules/comments/getMovieDetails';
+import { commentsCounter } from '../modules/comments/getMovieDetails.js';
 
 const array = [
   { username: 'ok', comment: 'comment new', creation_date: '2023-02-11' },

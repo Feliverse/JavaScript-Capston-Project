@@ -7,10 +7,10 @@ const showComment = async (movieId, name, description) => {
     {
       method: 'POST',
       body: JSON.stringify(mBody),
-      
-      headers: {'Content-Type': 'application/JSON'},
+
+      headers: { 'Content-Type': 'application/JSON' },
     });
-  //await response; // extract JSON from the http response
+  // await response; // extract JSON from the http response
   const result = await response.text();
   return result;
 };

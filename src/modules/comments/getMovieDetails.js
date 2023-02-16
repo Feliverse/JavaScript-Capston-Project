@@ -3,7 +3,7 @@ import getComments from './comments.js';
 
 const getMovieDetails = async (movieId) => {
   const response = await fetch(`https://api.tvmaze.com/shows/${movieId}`);
-  const movieDetails = await response.json(); 
+  const movieDetails = await response.json();
   const popupContainer = document.querySelector('.popup-container');
   const movieName = movieDetails.name;
   const { summary } = movieDetails;
@@ -76,9 +76,9 @@ const getMovieDetails = async (movieId) => {
     const name = addComment.querySelector('input[name="name"]').value;
     const comment = addComment.querySelector('input[name="comment"]').value;
     const movieId = addComment.querySelector('input[name="movieId"]').value;
-    
+
     showComment(movieId, name, comment);
-        
+
     const d = new Date();
     const commentDescription = document.querySelector('.comment-description');
     const commentConter = document.querySelector('#totalComment');
@@ -89,7 +89,7 @@ const getMovieDetails = async (movieId) => {
     commentDescription.innerHTML += `<li>${ye}-${mo}-${da}  ${name}:   ${comment}</li>`;
     commentConter.innerHTML = Number(commentConter.innerHTML) + 1;
     addComment.reset();
-  });  
+  });
 };
 
 const commentsCounter = (comments) => {
@@ -99,4 +99,4 @@ const commentsCounter = (comments) => {
   return comments.length;
 };
 
-export {getMovieDetails, commentsCounter}
+export { getMovieDetails, commentsCounter };

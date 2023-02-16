@@ -73,7 +73,7 @@ section#section {
   border-radius: 100px;
   cursor: pointer;
   display: inline-block;
-  font-family: cursive, CerebriSans-Regular, -apple-system, system-ui, Roboto,sans-serif;
+  font-family: cursive, CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
   padding: 7px 20px;
   text-align: center;
   text-decoration: none;
@@ -322,7 +322,6 @@ h3 {
   justify-content: center;
   height: 50%;
   width: 100%;
-  background: linear-gradient(5deg,yellow,gold 50%, tomato) 10 stretch;
 }
 
 .popup-movie-banner-img {
@@ -341,11 +340,9 @@ h3 {
 }
 
 .popup-description {
-  max-width: 100;
+  max-width: 100%;
   font-weight: 400;
 }
-
-
 
 form {
   display: flex;
@@ -355,7 +352,6 @@ form {
 }
 
 input[type='text'],
-li,
 .btn-outline-primary {
   display: flex;
   align-items: center;
@@ -364,7 +360,7 @@ li,
   border: none;
   list-style: none;
   background: rgb(56, 54, 54);
-  padding: 20px ;
+  padding: 20px;
   border-radius: 50px;
   margin: 10px 5px;
   color: var(--color-primary);
