@@ -60,7 +60,7 @@ ul.navigation li:focus {
   filter: blur(0);
 } /* HEADER */
 
-div#tv-main-info {
+div.tv-main-info {
   display: flex;
   gap: 1rem;
   width: 100%;
@@ -70,7 +70,7 @@ img.tv-main-img {
   width: 100%;
 }
 
-#tv-likes {
+.tv-likes {
   display: flex;
   align-items: center;
 }
@@ -80,7 +80,7 @@ img.tv-main-img {
   box-shadow: #fff 0 0 10px;
 }
 
-#tv-other-info {
+.tv-other-info {
   color: white;
   display: flex;
   font-weight: normal;
@@ -107,6 +107,7 @@ section#section {
   overflow-wrap: break-word;
   justify-items: center;
   justify-content: center;
+  row-gap: 2rem;
 }
 
 .button {

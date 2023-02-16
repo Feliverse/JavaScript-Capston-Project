@@ -23,23 +23,27 @@ const displayMovies = async () => {
             <h2 class="tv-name">${movie.name}</h2>
             <span class="tv-likes"
               ><p id="like-${movie.id}" class="tv-nbrOfLikes">${movieLike}</p>
-              <button class="heart-button" type="button"><div class="heart" id=${movie.id}></div></button>
+              <button class="heart-button tv-likes-img" type="button"><div class="heart" id=${movie.id}></div></button>
               <!-- class="fa-solid fa-heart" -->
             </span>
           </div>
           <div class="tv-div">
-            <button id=${movie.id} class="comment button">Comments</button>
+            <button id=${movie.id} class="comment button">&#128172 Comments</button>
             <button class="reservation button">Reservation</button>
           </div>
         </div>
       </section>
     `;
+
     const likeButtons = section.querySelectorAll('.heart-button');
     likeButtons.forEach(async (likeButton) => {
       likeButton.addEventListener('click', async (e) => {
         e.preventDefault();
         await postLikes(e.target.id);
-        window.location.reload();
+        const likeContent = e.target.parentElement.parentElement.firstChild;
+        const previousNbrOfLikes = Number(likeContent.innerText);
+        const newNbrOfLikes = previousNbrOfLikes + 1;
+        likeContent.innerText = newNbrOfLikes;
       });
     });
     // showCommentPopUp();
