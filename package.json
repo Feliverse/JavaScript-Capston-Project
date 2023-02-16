@@ -24,7 +24,7 @@
     "@babel/core": "^7.20.12",
     "@babel/plugin-transform-modules-commonjs": "^7.20.11",
     "@babel/preset-env": "^7.20.2",
-    "babel-eslint": "^10.1.0",
+    "babel-eslint": "^8.1.0",
     "babel-jest": "^29.4.2",
     "css-loader": "^6.7.3",
     "eslint": "^7.32.0",
