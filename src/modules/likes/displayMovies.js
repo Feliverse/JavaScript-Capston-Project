@@ -25,7 +25,6 @@ const displayMovies = async () => {
             <span class="tv-likes"
               ><p id="like-${movie.id}" class="tv-nbrOfLikes">${movieLike}</p>
               <button class="heart-button tv-likes-img" type="button"><div class="heart" id=${movie.id}></div></button>
-              <!-- class="fa-solid fa-heart" -->
             </span>
           </div>
           <div class="tv-div">
