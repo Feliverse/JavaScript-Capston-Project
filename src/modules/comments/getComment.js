@@ -1,4 +1,4 @@
-import getMovieDetails from './getMovieDetails.js';
+import { getMovieDetails } from '../comments/getMovieDetails';
 
 const showCommentPopUp = () => {
   const popup = document.querySelector('.popup');
@@ -10,12 +10,12 @@ const showCommentPopUp = () => {
       const movieId = event.target.id;
       getMovieDetails(movieId);
       popup.classList.remove('hide');
+      popup.style.display = 'flex';
     });
   });
   const closeButton = document.querySelectorAll('#popup-close');
   closeButton.forEach((button) => button.addEventListener('click', () => {
     popup.style.display = 'none';
-    window.location.reload();
   }));
 };
 export default showCommentPopUp;

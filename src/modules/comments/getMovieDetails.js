@@ -3,8 +3,7 @@ import getComments from './comments.js';
 
 const getMovieDetails = async (movieId) => {
   const response = await fetch(`https://api.tvmaze.com/shows/${movieId}`);
-  const movieDetails = await response.json(); // extract JSON from the http response
-  // do something with myJson
+  const movieDetails = await response.json(); 
   const popupContainer = document.querySelector('.popup-container');
   const movieName = movieDetails.name;
   const { summary } = movieDetails;
@@ -37,7 +36,7 @@ const getMovieDetails = async (movieId) => {
             <h2>${movieName}</h2>
           </div>
           <div class="popup-description">
-            ${summary}
+            ${summary} <br>
           </div>
 
           <div class="popup-comments">
@@ -50,7 +49,7 @@ const getMovieDetails = async (movieId) => {
 
   let commentList = '';
   for (let k = 0; k < comments.length; k += 1) {
-    const temp = `<li>${comments[k].creation_date} ${comments[k].username}: ${comments[k].comment}</li>`;
+    const temp = `<li>&#128489 &nbsp &nbsp ${comments[k].creation_date} ${comments[k].username}:&nbsp &nbsp ${comments[k].comment}</li>`;
     commentList += temp;
   }
   const secondPart = `
@@ -59,22 +58,11 @@ const getMovieDetails = async (movieId) => {
           </div>
 
           <div class="add-comment-form">
-            <h3 class="popup-comments-title">
-              Add Comments<span id="addCOmment"></span>
-            </h3>
             <form id="addComment">
-            <input type="text" placeholder="Name" name="name" />
+            <input type="text" placeholder="Your name" name="name" required />
             <input type="hidden" placeholder="Name" name="movieId" value="${movieId}" />
-            <textarea
-                name="comment"
-                id="comment"
-                cols="30"
-                rows="3"
-                placeholder="Comment"
-                name="comment"
-              >
-              </textarea>
-              <button type="submit" class="btn btn-outline-primary">Submit</button>
+            <input type="text" id="comment" placeholder="add comment" name="comment" required />
+              <button id="addComment" type="submit" class="btn btn-outline-primary">&#128490</button>
             </form>
           </div>
         </div>`;
@@ -86,16 +74,11 @@ const getMovieDetails = async (movieId) => {
   addComment.addEventListener('submit', (event) => {
     event.preventDefault();
     const name = addComment.querySelector('input[name="name"]').value;
-    const comment = addComment.querySelector('textarea[name="comment"]').value;
+    const comment = addComment.querySelector('input[name="comment"]').value;
     const movieId = addComment.querySelector('input[name="movieId"]').value;
-    window.location.reload();
+    
     showComment(movieId, name, comment);
-    showComment.fire({
-      title: 'Success!',
-      text: 'Your comment has been added',
-      icon: 'success',
-      confirmButtonText: 'Cool',
-    });
+        
     const d = new Date();
     const commentDescription = document.querySelector('.comment-description');
     const commentConter = document.querySelector('#totalComment');
@@ -103,9 +86,17 @@ const getMovieDetails = async (movieId) => {
     const ye = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(d);
     const mo = new Intl.DateTimeFormat('en', { month: '2-digit' }).format(d);
     const da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(d);
-    commentDescription.innerHTML += `<li>${ye}-${mo}-${da} ${name}: ${comment}</li>`;
+    commentDescription.innerHTML += `<li>${ye}-${mo}-${da}  ${name}:   ${comment}</li>`;
     commentConter.innerHTML = Number(commentConter.innerHTML) + 1;
-  });
+    addComment.reset();
+  });  
 };
 
-export default getMovieDetails;
+const commentsCounter = (comments) => {
+  if (!comments.length) {
+    return 0;
+  }
+  return comments.length;
+};
+
+export {getMovieDetails, commentsCounter}
