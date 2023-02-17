@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import movieCounter from '../src/modules/likes/movieCounter.js';
+import movieCounter from '../modules/likes/movieCounter.js';
 
 describe('the number of movies', () => {
   test('should be equal to 0', () => {
