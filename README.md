@@ -1,8 +1,8 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <!-- <img src="https://github.com/microverseinc/readme-template/raw/master/murple_logo.png" alt="logo" width="50"  height="auto" /> -->
-  <!-- <br/> -->
+  <img src="https://github.com/Feliverse/JavaScript-Capston-Project/blob/dev/src/images/today-tv-series.png" alt="logo" width="250"  height="auto" />
+  <br/>
   <h3><b>Microverse README</b></h3>
 </div>
 
@@ -78,7 +78,7 @@ The JavaScript capstone project is about building our own web application based 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - [Live Demo Link](https://feliverse.github.io/JavaScript-Capston-Project/dist/)
-<!--  - [Video presentation](https://www.loom.com/share/)-->
+- [Video presentation](https://drive.google.com/file/d/101YcGJyBorve074Qaci6uqYrrNIKRzJ7/view?usp=share_link)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
