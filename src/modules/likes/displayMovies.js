@@ -2,7 +2,7 @@
 import movieCounter from './movieCounter.js';
 import postLikes from './postLikes.js';
 import getMovieLikes from './getLikes.js';
-// import showCommentPopUp from '../comments/getComment.js';
+import showCommentPopUp from '../comments/getComment.js';
 
 const displayMovies = async () => {
   const request = await fetch('https://api.tvmaze.com/shows');
@@ -46,7 +46,7 @@ const displayMovies = async () => {
         likeContent.innerText = newNbrOfLikes;
       });
     });
-    // showCommentPopUp();
+    showCommentPopUp();
   });
 };
 
