@@ -78,7 +78,7 @@ The JavaScript capstone project is about building our own web application based 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - [Live Demo Link](https://feliverse.github.io/JavaScript-Capston-Project/dist/)
-<!--  - [Video presentation](https://www.loom.com/share/)-->
+- [Video presentation](https://drive.google.com/file/d/101YcGJyBorve074Qaci6uqYrrNIKRzJ7/view?usp=share_link)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
